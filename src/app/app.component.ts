@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 import { MoviesListComponent } from './movies/movies-list/movies-list.component';
+import { MenuComponent } from './shared/components/menu/menu.component';
 
 @Component({
   selector: 'app-root',
-  imports: [MoviesListComponent],
+  imports: [MoviesListComponent, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

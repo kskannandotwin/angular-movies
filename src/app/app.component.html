@@ -1,7 +1,11 @@
-<h2>Date of the movie</h2>
+<h2>List of movies</h2>
 
 @for (movie of movies; track $index) {
-  <div class="movies-container">
+<div class="movies-container">
+  <div>
+    <img [src]="movie.poster" width="169" height="250">
+  </div>
+  <div>
     <div>
       {{ $index + 1 }}) Movie: <b>{{ movie.title | uppercase }}</b>
     </div>
@@ -12,4 +16,5 @@
       Currency: {{ movie.price | currency }}
     </div>
   </div>
+</div>
 }

@@ -53,7 +53,7 @@ export class AppComponent {
           poster: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/CaptainAmericaHughes.jpg/250px-CaptainAmericaHughes.jpg'
         }
       ]
-    }, 2000);
+    }, 100);
   }
 
   processRating(rate: number): void {

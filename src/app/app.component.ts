@@ -5,10 +5,11 @@ import { RouterOutlet } from '@angular/router';
 import { MoviesListComponent } from './movies/movies-list/movies-list.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
 import { RatingComponent } from './shared/components/rating/rating.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
-  imports: [MoviesListComponent, MenuComponent],
+  imports: [MoviesListComponent, MenuComponent, MatButtonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

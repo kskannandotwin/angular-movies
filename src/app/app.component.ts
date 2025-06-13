@@ -8,7 +8,7 @@ import { RatingComponent } from './shared/components/rating/rating.component';
 
 @Component({
   selector: 'app-root',
-  imports: [MoviesListComponent, MenuComponent, RatingComponent],
+  imports: [MoviesListComponent, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

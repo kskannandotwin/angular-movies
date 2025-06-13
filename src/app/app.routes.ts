@@ -11,6 +11,7 @@ import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
 import { EditActorComponent } from './actors/edit-actor/edit-actor.component';
 import { EditTheaterComponent } from './theaters/edit-theater/edit-theater.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
     { path: '', component: LandingPageComponent },
@@ -28,4 +29,6 @@ export const routes: Routes = [
 
     { path: 'movies/create', component: CreateMovieComponent },
     { path: 'movies/edit/:id', component: EditMovieComponent },
+
+    { path: '**', component: PageNotFoundComponent }
 ];

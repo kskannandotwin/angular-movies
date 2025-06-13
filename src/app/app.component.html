@@ -1,5 +1,5 @@
 <app-menu></app-menu>
-<app-rating [maxRating]="5"></app-rating>
+<app-rating [maxRating]="5" (rated)="processRating($event)"></app-rating>
 
 <!-- <h2>Upcoming releases</h2>
 <app-movies-list [movies]="upcomingReleasesMovies"></app-movies-list>

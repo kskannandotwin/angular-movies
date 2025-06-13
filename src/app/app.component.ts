@@ -55,4 +55,8 @@ export class AppComponent {
       ]
     }, 2000);
   }
+
+  processRating(rate: number): void {
+    alert(`You rated the movie ${rate}`);
+  }
 }

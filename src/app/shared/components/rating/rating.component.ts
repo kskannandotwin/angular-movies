@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -15,6 +15,9 @@ export class RatingComponent {
 
   @Input()
   selectedRating: number = 0;
+
+  @Output()
+  rated = new EventEmitter<number>();
 
   clickedRating: number = 0;
 
@@ -33,5 +36,6 @@ export class RatingComponent {
   handleClick(index: number): void {
     this.clickedRating = index + 1;
     this.selectedRating = this.clickedRating;
+    this.rated.emit(this.clickedRating);
   }
 }

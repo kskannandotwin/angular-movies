@@ -4,6 +4,8 @@ import { Router, RouterLink } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { first } from 'rxjs';
+import { firstLetterShouldBeUppercase } from '../../shared/functions/validations';
 
 @Component({
   selector: 'app-create-genre',
@@ -18,7 +20,7 @@ export class CreateGenreComponent {
 
   form = this.formBuilder.group({
     name: ['', {
-      validators: [Validators.required],
+      validators: [Validators.required, firstLetterShouldBeUppercase()],
     }]
   });
 
@@ -26,6 +28,9 @@ export class CreateGenreComponent {
     let field = this.form.controls.name;
     if (field.hasError('required')) {
       return 'The name field is required.';
+    }
+    if (field.hasError('firstLetterShouldBeUppercase')) {
+      return field.getError('firstLetterShouldBeUppercase').message;
     }
     return '';
   }

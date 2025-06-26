@@ -14,7 +14,9 @@ export class EditTheaterComponent {
 
   model: TheaterDTO = {
     name: 'Acropolis',
-    id: 1
+    id: 1,
+    latitude: 37.9838,
+    longitude: 23.7275
   };
 
   saveChanges(theater: TheaterCreationDTO) {

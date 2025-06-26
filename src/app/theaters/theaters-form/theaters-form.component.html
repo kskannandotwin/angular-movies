@@ -4,6 +4,9 @@
         <input matInput [formControl]="form.controls.name" />
         <mat-error>{{ getErrorMessagesForName() }}</mat-error>
     </mat-form-field>
+
+    <h4>Select the location of the movie theater</h4>
+    <app-map [initialCoordinates]="initialCoordinate" (coordinateSelected)="handleCoordinateSelection($event)"></app-map>
     
     <div class="buttons-container">
         <button mat-flat-button [disabled]="form.invalid">Save Changes</button>

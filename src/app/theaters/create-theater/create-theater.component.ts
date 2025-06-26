@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import { TheaterCreationDTO } from '../theaters-form/theaters.models';
+import { TheatersFormComponent } from '../theaters-form/theaters-form.component';
 
 @Component({
   selector: 'app-create-theater',
-  imports: [],
+  imports: [TheatersFormComponent],
   templateUrl: './create-theater.component.html',
   styleUrl: './create-theater.component.css'
 })
 export class CreateTheaterComponent {
-
+  saveChanges(theater: TheaterCreationDTO) {
+    console.log('Creating the theater', theater);
+  }
 }

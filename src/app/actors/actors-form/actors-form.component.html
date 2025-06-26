@@ -13,9 +13,13 @@
         <mat-error>{{ getErrorMessagesForDateOfBirth() }}</mat-error>
     </mat-form-field>
 
+    <app-input-img title="Actor's Picture"
+    [imageUrl]="model?.picture"
+    (selectedFile)="handleFileSelection($event)"></app-input-img>
+
     <div class="buttons-container">
         <button mat-flat-button type="submit" [disabled]="form.invalid">Save Changes</button>
         <a mat-stroked-button routerLink="/actors">Cancel</a>
     </div>
-        
+
 </form>

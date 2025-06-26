@@ -15,7 +15,8 @@ export class EditActorComponent {
   model: ActorDTO = {
     id: 1,
     name: 'Tom Hanks',
-    dateOfBirth: new Date('1948-05-25')
+    dateOfBirth: new Date('1948-05-25'),
+    picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Tom_Hanks_TIFF_2019.jpg/330px-Tom_Hanks_TIFF_2019.jpg'
   };
 
   saveChanges(actor: ActorCreationDTO) {

@@ -21,6 +21,9 @@
     [imageUrl]="model?.poster"
     (selectedFile)="handleFileSelection($event)"></app-input-img>
 
+    <h4>Select the genres</h4>
+    <app-multiple-selector [nonSelected]="nonSelectedGenres" [selected]="selectedGenres"></app-multiple-selector>
+
     <div class="buttons-container">
         <button mat-flat-button type="submit" [disabled]="form.invalid">Save Changes</button>
         <a mat-stroked-button routerLink="/">Cancel</a>

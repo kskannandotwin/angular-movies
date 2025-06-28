@@ -40,6 +40,12 @@ export class MoviesFormComponent implements OnInit {
   @Input({ required: true })
   nonSelectedGenres!: MultipleSelectorDTO[];
 
+  @Input({ required: true })
+  selectedTheaters!: MultipleSelectorDTO[];
+
+  @Input({ required: true })
+  nonSelectedTheaters!: MultipleSelectorDTO[];
+
   private formBuilder = inject(FormBuilder);
   form = this.formBuilder.group({
     title: ['', { validators: [Validators.required] }],
@@ -77,6 +83,9 @@ export class MoviesFormComponent implements OnInit {
 
     const genresIds = this.selectedGenres.map(val => val.key);
     movie.genresIds = genresIds;
+
+    const theatersIds = this.selectedTheaters.map(val => val.key);
+    movie.theatersIds = theatersIds;
 
     this.postForm.emit(movie);
   }

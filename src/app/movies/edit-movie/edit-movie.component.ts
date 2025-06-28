@@ -22,12 +22,20 @@ export class EditMovieComponent {
   }
 
   nonSelectedGenres: MultipleSelectorDTO[] = [
-    { key: 1, description: 'Action' },    
+    { key: 1, description: 'Action' },
     { key: 3, description: 'Comedy' }
   ];
 
   selectedGenres: MultipleSelectorDTO[] = [
     { key: 2, description: 'Drama' }
+  ];
+
+  nonSelectedTheaters: MultipleSelectorDTO[] = [
+    { key: 1, description: 'Acropolis' }
+  ];
+
+  selectedTheaters: MultipleSelectorDTO[] = [
+    { key: 2, description: 'Agora Mall' }
   ];
 
   saveChanges(movie: MovieCreationDTO) {

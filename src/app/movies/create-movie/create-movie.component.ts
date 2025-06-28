@@ -18,6 +18,13 @@ export class CreateMovieComponent {
   ];
 
   selectedGenres: MultipleSelectorDTO[] = [];
+
+  nonSelectedTheaters: MultipleSelectorDTO[] = [
+    { key: 1, description: 'Acropolis' },
+    { key: 2, description: 'Agora Mall' }
+  ];
+
+  selectedTheaters: MultipleSelectorDTO[] = [];
   saveChanges(movie: MovieCreationDTO) {
     console.log('Creating the movie', movie);
   }

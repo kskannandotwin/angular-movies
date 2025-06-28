@@ -10,6 +10,7 @@ import { InputImgComponent } from '../../shared/components/input-img/input-img.c
 import { RouterLink } from '@angular/router';
 import { MultipleSelectorComponent } from '../../shared/components/multiple-selector/multiple-selector.component';
 import { MultipleSelectorDTO } from '../../shared/components/multiple-selector/MultipleSelectorDTO';
+import { ActorsAutocompleteComponent } from '../../actors/actors-autocomplete/actors-autocomplete.component';
 
 @Component({
   selector: 'app-movies-form',
@@ -21,7 +22,8 @@ import { MultipleSelectorDTO } from '../../shared/components/multiple-selector/M
     MatDatepickerModule,
     InputImgComponent,
     RouterLink,
-    MultipleSelectorComponent
+    MultipleSelectorComponent,
+    ActorsAutocompleteComponent
   ],
   templateUrl: './movies-form.component.html',
   styleUrl: './movies-form.component.css'
